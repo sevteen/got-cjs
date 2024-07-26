@@ -1,14 +1,18 @@
 {
-	"name": "got",
+	"name": "got-cjs",
 	"version": "14.4.2",
 	"description": "Human-friendly and powerful HTTP request library for Node.js",
 	"license": "MIT",
 	"repository": "sindresorhus/got",
 	"funding": "https://github.com/sindresorhus/got?sponsor=1",
 	"type": "module",
+	"main": "dist/cjs/source/index.js",
+	"module": "dist/esm/source/index.js",
+	"types": "dist/esm/source/index.d.ts",
 	"exports": {
-		"types": "./dist/source/index.d.ts",
-		"default": "./dist/source/index.js"
+		"require": "./dist/cjs/source/index.js",
+		"import": "./dist/esm/source/index.js",
+		"types": "./dist/esm/source/index.d.ts"
 	},
 	"sideEffects": false,
 	"engines": {
@@ -17,11 +21,12 @@
 	"scripts": {
 		"test": "xo && tsc --noEmit && NODE_OPTIONS='--import=tsx/esm' ava",
 		"release": "np",
-		"build": "del-cli dist && tsc",
+		"build": "del-cli dist && rollup -c",
 		"prepare": "npm run build"
 	},
 	"files": [
-		"dist/source"
+		"dist/esm/source",
+		"dist/cjs/source"
 	],
 	"keywords": [
 		"http",
@@ -45,7 +50,8 @@
 		"axios",
 		"superagent",
 		"node-fetch",
-		"ky"
+		"ky",
+		"got-cjs"
 	],
 	"dependencies": {
 		"@sindresorhus/is": "^7.0.0",
@@ -62,7 +68,12 @@
 	},
 	"devDependencies": {
 		"@hapi/bourne": "^3.0.0",
-		"@sindresorhus/tsconfig": "^5.0.0",
+		"@rollup/plugin-babel": "^6.0.4",
+		"@rollup/plugin-commonjs": "^26.0.1",
+		"@rollup/plugin-json": "^6.1.0",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@rollup/plugin-typescript": "^11.1.6",
+		"@sindresorhus/tsconfig": "^5.1.1",
 		"@sinonjs/fake-timers": "^11.2.2",
 		"@types/benchmark": "^2.1.5",
 		"@types/express": "^4.17.21",
@@ -86,6 +97,7 @@
 		"form-data": "^4.0.0",
 		"formdata-node": "^6.0.3",
 		"get-stream": "^9.0.1",
+		"glob": "^11.0.0",
 		"nock": "^13.5.4",
 		"node-fetch": "^3.3.2",
 		"np": "^10.0.5",
@@ -95,6 +107,9 @@
 		"pify": "^6.1.0",
 		"readable-stream": "^4.4.2",
 		"request": "^2.88.2",
+		"rollup": "^4.19.0",
+		"rollup-plugin-copy": "^3.5.0",
+		"rollup-plugin-dts": "^6.1.1",
 		"sinon": "^18.0.0",
 		"slow-stream": "0.0.4",
 		"tempy": "^3.1.0",

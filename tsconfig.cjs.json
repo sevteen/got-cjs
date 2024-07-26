@@ -1,12 +1,12 @@
 {
 	"extends": "@sindresorhus/tsconfig",
 	"compilerOptions": {
-		"outDir": "dist/esm",
+		"outDir": "dist/cjs",
 		"rootDir": ".",
 		"target": "es2022", // Node.js 18
 		"lib": ["es2022"],
 		"noPropertyAccessFromIndexSignature": false,
-		"isolatedModules": true,
+		"isolatedModules": false,
 		"module": "node16"
 	},
 	"include": ["source/**/*", "test/**/*", "benchmark/**/*"]
