@@ -169,7 +169,10 @@
 			"@typescript-eslint/promise-function-async": "off",
 			"no-lone-blocks": "off",
 			"unicorn/no-await-expression-member": "off",
-			"unicorn/prefer-event-target": "off"
+			"unicorn/prefer-event-target": "off",
+			"import/no-anonymous-default-export": "off",
+			"object-curly-spacing": "off",
+			"quotes": "off"
 		}
 	},
 	"runkitExampleFilename": "./documentation/examples/runkit-example.js"

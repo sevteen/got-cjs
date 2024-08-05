@@ -2,7 +2,6 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import json from "@rollup/plugin-json";
-import babel from "@rollup/plugin-babel";
 import { globSync } from "glob";
 
 const sourceFiles = globSync("source/**/*.ts");
