@@ -1,5 +1,5 @@
 {
-	"name": "@sevteen/got-cjs",
+	"name": "got-commonjs",
 	"version": "14.4.2",
 	"description": "Human-friendly and powerful HTTP request library for Node.js",
 	"license": "MIT",
