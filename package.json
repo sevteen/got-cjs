@@ -1,5 +1,5 @@
 {
-	"name": "got-commonjs",
+	"name": "got-cjs-compat",
 	"version": "14.4.2",
 	"description": "Human-friendly and powerful HTTP request library for Node.js",
 	"license": "MIT",
