@@ -9,5 +9,6 @@
 		"isolatedModules": true,
 		"module": "node16"
 	},
-	"include": ["source/**/*", "test/**/*", "benchmark/**/*"]
+
+	"include": ["source/**/*"]
 }

@@ -13,9 +13,14 @@
 	"module": "dist/esm/source/index.js",
 	"types": "dist/esm/source/index.d.ts",
 	"exports": {
-		"require": "./dist/cjs/source/index.js",
-		"import": "./dist/esm/source/index.js",
-		"types": "./dist/esm/source/index.d.ts"
+		".":{"require": {
+			"default": "./dist/cjs/source/index.js",
+			"types": "./dist/cjs/source/index.d.ts"
+		},
+		"import": {
+			"default": "./dist/esm/source/index.js",
+			"types": "./dist/esm/source/index.d.ts"
+		}}
 	},
 	"sideEffects": false,
 	"engines": {
@@ -24,16 +29,11 @@
 	"scripts": {
 		"test": "xo && tsc --noEmit && NODE_OPTIONS='--import=tsx/esm' ava",
 		"release": "np",
-		"build": "del-cli dist && rollup -c",
-		"prepare": "npm run build"
+		"build": "del-cli dist && zx ./build.js"
 	},
 	"files": [
-		"dist/esm/source",
-		"dist/cjs/source",
-		"dist/esm/node_modules",
-		"dist/cjs/node_modules",
-		"dist/esm/_virtual",
-		"dist/cjs/_virtual"
+		"dist/esm/*",
+		"dist/cjs/*"
 	],
 	"keywords": [
 		"http",
@@ -71,7 +71,8 @@
 		"lowercase-keys": "^3.0.0",
 		"p-cancelable": "^4.0.1",
 		"responselike": "^3.0.0",
-		"type-fest": "^4.19.0"
+		"type-fest": "^4.19.0",
+		"zx": "^8.1.9"
 	},
 	"devDependencies": {
 		"@hapi/bourne": "^3.0.0",
