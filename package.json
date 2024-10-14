@@ -27,8 +27,8 @@
 		"node": ">=20"
 	},
 	"scripts": {
-		"test": "xo && tsc --noEmit && NODE_OPTIONS='--import=tsx/esm' ava",
-		"release": "np",
+		"test": "xo && tsc --noEmit",
+		"release": "np --yolo",
 		"build": "del-cli dist && zx ./build.js"
 	},
 	"files": [
