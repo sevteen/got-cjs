@@ -1,6 +1,6 @@
 {
 	"name": "got-cjs-compat",
-	"version": "14.4.3",
+	"version": "14.4.4",
 	"description": "Human-friendly and powerful HTTP request library for Node.js",
 	"license": "MIT",
 	"repository": {
@@ -13,14 +13,16 @@
 	"module": "dist/esm/source/index.js",
 	"types": "dist/esm/source/index.d.ts",
 	"exports": {
-		".":{"require": {
-			"default": "./dist/cjs/source/index.js",
-			"types": "./dist/cjs/source/index.d.ts"
-		},
-		"import": {
-			"default": "./dist/esm/source/index.js",
-			"types": "./dist/esm/source/index.d.ts"
-		}}
+		".": {
+			"require": {
+				"default": "./dist/cjs/source/index.js",
+				"types": "./dist/cjs/source/index.d.ts"
+			},
+			"import": {
+				"default": "./dist/esm/source/index.js",
+				"types": "./dist/esm/source/index.d.ts"
+			}
+		}
 	},
 	"sideEffects": false,
 	"engines": {
