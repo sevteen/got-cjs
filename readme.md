@@ -69,8 +69,10 @@
 
 ## Install
 
+Replace in-place `got` using [npm install &lt;alias&gt;@npm:&lt;name&gt;](https://docs.npmjs.com/cli/v8/commands/npm-install#:~:text=npm%20install%20%3Calias%3E%40npm%3A%3Cname%3E)
+
 ```sh
-npm install got
+npm install got@npm:got-cjs-compat
 ```
 
 **Warning:** This package is native [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) and no longer provides a CommonJS export. If your project uses CommonJS, you will have to [convert to ESM](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). Please don't open issues for questions regarding CommonJS / ESM.
