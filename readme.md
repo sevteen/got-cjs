@@ -54,30 +54,22 @@
 > Human-friendly and powerful HTTP request library for Node.js
 
 <!-- [![Coverage Status](https://codecov.io/gh/sindresorhus/got/branch/main/graph/badge.svg)](https://codecov.io/gh/sindresorhus/got/branch/main) -->
-[![Downloads](https://img.shields.io/npm/dm/got.svg)](https://npmjs.com/got)
-[![Install size](https://packagephobia.com/badge?p=got)](https://packagephobia.com/result?p=got)
+[![Downloads](https://img.shields.io/npm/dm/got-cjs-compat.svg)](https://npmjs.com/got-cjs-compat)
+[![Install size](https://packagephobia.com/badge?p=got-cjs-compat)](https://packagephobia.com/result?p=got-cjs-compat)
 
 [See how Got compares to other HTTP libraries](#comparison)
 
----
-
-**You probably want [Ky](https://github.com/sindresorhus/ky) instead, by the same people. It's smaller, works in the browser too, and is more stable since it's built upon [`Fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).**
-
----
-
-**Support questions should be asked [here](https://github.com/sindresorhus/got/discussions).**
+A community-maintained fork of Got, designed for both CommonJS (CJS) and ECMAScript Module (ESM) compatibility. This repository was created independently from the original Got library to extend support across all versions of ECMAScript, ensuring smoother transitions for developers in both CJS and ESM environments. Got-CJS-Compat offers the same powerful HTTP request features as Got while making it easy for projects still using CJS to benefit from Got’s core functionality.
 
 ## Install
 
 Replace in-place `got` using [npm install &lt;alias&gt;@npm:&lt;name&gt;](https://docs.npmjs.com/cli/v8/commands/npm-install#:~:text=npm%20install%20%3Calias%3E%40npm%3A%3Cname%3E)
 
+Note: This package supports both ESM and CJS environments. If your project uses CJS, there’s no need to migrate to ESM to use Got with this library.
+
 ```sh
 npm install got@npm:got-cjs-compat
 ```
-
-**Warning:** This package is native [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) and no longer provides a CommonJS export. If your project uses CommonJS, you will have to [convert to ESM](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). Please don't open issues for questions regarding CommonJS / ESM.
-
-**Got v11 is no longer maintained and we will not accept any backport requests.**
 
 ## Take a peek
 
